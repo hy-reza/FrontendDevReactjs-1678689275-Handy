@@ -2,13 +2,13 @@ import StarRatings from "react-star-ratings";
 import { useNavigate } from "react-router-dom";
 
 interface CardProps {
-  id: string;
-  name: string;
-  pictureId: string;
-  type: "Fast Food" | "Casual" | "Fine Dining" | "Cafes";
-  rating: number;
-  isOpen: boolean;
-  priceRange: "Low" | "Medium" | "High";
+  id: string
+  name: string
+  pictureId: string
+  type: "Fast Food" | "Casual" | "Fine Dining" | "Cafes"
+  rating: number
+  isOpen: boolean 
+  priceRange: "Low" | "Medium" | "High"
   
 }
 
