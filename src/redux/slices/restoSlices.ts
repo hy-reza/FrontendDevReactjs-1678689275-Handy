@@ -20,7 +20,6 @@ export const retriveRestos = createAsyncThunk(
 export const retriveResto = createAsyncThunk(
   "resto/retriveById",
   async (id: string, { rejectWithValue }) => {
-    console.log({id})
     try {
       const res = await resto.retriveById(id);
       return res.data;

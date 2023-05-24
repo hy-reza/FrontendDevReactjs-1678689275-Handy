@@ -16,7 +16,6 @@ interface FilterProps {
 }
 
 const Filter: React.FC<FilterProps> = ({ filter, setFilter }) => {
-  console.log(filter);
   function handleChange(
     event:
       | React.ChangeEvent<HTMLInputElement>
