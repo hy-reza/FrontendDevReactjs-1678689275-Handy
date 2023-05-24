@@ -19,7 +19,7 @@ const Detail = () => {
     dispatch(retriveResto(id as string));
   }, [id, dispatch]);
   useEffect(() => {
-    shuffle((prev) => prev.sort(() => 0.5 - Math.random()));
+    shuffle((prev) => prev.sort(() => 0.5 - Math.random()).filter(r => r.id != id));
   }, [id, dispatch]);
 
   return (
@@ -30,8 +30,8 @@ const Detail = () => {
             <div className="mx-auto flex flex-wrap">
               <Header />
               <img
-                alt="ecommerce"
-                className="lg:w-1/2 w-full object-cover object-center rounded border border-gray-200"
+                alt="resto"
+                className="lg:w-1/2 w-full md:h-[500px] object-cover object-center rounded border border-gray-200"
                 src={`https://restaurant-api.dicoding.dev/images/large/${detail.pictureId}`}
               />
               <div className="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
@@ -54,8 +54,8 @@ const Detail = () => {
               <h2 className="text-xl mt-10 title-font my-10 text-gray-900 tracking-widest">
                 Recommended Resto
               </h2>
-              <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5 mb-10 m-auto w-full">
-                {resto.slice(0, 5).map((r) => (
+              <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 mb-10 m-auto w-full">
+                {resto.slice(0, 4).map((r) => (
                   <Card
                     key={r.id}
                     id={r.id}

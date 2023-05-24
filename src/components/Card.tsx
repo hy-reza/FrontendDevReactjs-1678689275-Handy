@@ -28,7 +28,7 @@ const Card: React.FC<CardProps> = ({
         <img
           src={`https://restaurant-api.dicoding.dev/images/small/${pictureId}`}
           alt="resto-pict"
-          className="w-full object-cover h-40"
+          className="w-full h-40 object-cover object-center"
         />
       </div>
       <div className="w-full  h-14">
