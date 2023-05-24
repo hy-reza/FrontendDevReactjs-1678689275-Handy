@@ -30,7 +30,7 @@ To start the project, follow these steps:
 
 
 ## Access Web Demo
-- netlyfy : 
+- netlyfy : https://velvety-creponne-07dedc.netlify.app/
 
 ## License
 
